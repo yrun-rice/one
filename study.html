@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>狗子学编程</title>
+    <link rel="stylesheet" href="study.css" />
+    <style>
+      p {
+        color: rgb(37, 17, 165);
+      }
+      #what_is_top {
+        color: rgb(23, 213, 77);
+      }
+      .what_is_top {
+        color: rgb(199, 223, 16);
+      }
+      li {
+        color: chocolate;
+      }
+      .hezi {
+        background-color: aquamarine;
+        margin: 10px;
+        width: 100px;
+        height: 80px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="study里的置顶图.jpg"
+      alt="study里的置顶图.jpg"
+      height="100"
+      width="134.4"
+    />
+    <a href="index.html"><p>哪来的回哪去</p></a>
+
+    <h1>这是一个h1标题,应用了外部样式表</h1>
+    <h2>这是一个普通的h2标题</h2>
+    <p
+      style="
+        color: rgb(237, 11, 67);
+        background-color: rgb(35, 63, 189);
+        font-size: 20px;
+        font-family: cursive;
+        height: 80px;
+        width: 500px;
+      "
+    >
+      这是一个段落，拥有一个内联样式，优先高于内部样式中的标签、id、class选择器。
+    </p>
+    <p id="what_is_top" class="what_is_top">
+      这是一个段落,看看id和class哪个优先度高
+    </p>
+    <p>这是一个段落，被p标签选择器赋予了样式</p>
+    <p>这有一个<br />换行（br标签）<br />符</p>
+    <hr />
+    <p>上面是一条分界线，使用hr标签</p>
+    <p>
+      这里演示几个常见的文本格式化标签：b标签定义<b>粗体</b>文本；i标签定义<i>斜体</i>字；
+      small标签定义<small>小号</small>字；sub标签定义<sub>下标</sub>字；sup标签定义<sup>上标</sup>字；
+      ins标签定义<ins>插入</ins>字；del标签定义<del>删除</del>字。
+    </p>
+    <hr />
+    <p>下面是一个有序列表（ol标签）：</p>
+    <ol>
+      <li>
+        有序列表项1，加个段落在下面
+        <p>这是一个段落哦</p>
+      </li>
+      <li>有序列表项2，加个<br />换行符</li>
+      <li>
+        有序列表项3,加个图片<img
+          src="study里的置顶图.jpg"
+          alt="study里的置顶图.jpg"
+          height="50"
+          width="67.2"
+        />
+      </li>
+    </ol>
+    <p>下面是一个无序列表（ul标签）：</p>
+    <ul>
+      <li>
+        无序列表项1,加个链接：<a href="../1_one/index.html"
+          >1_one中的index.html</a
+        >
+      </li>
+      <li>
+        无序列表项2，嵌套一个有序列表：
+        <ol>
+          <li>嵌套有序列表项1</li>
+          <li>嵌套有序列表项2</li>
+          <li>嵌套有序列表项3</li>
+        </ol>
+      </li>
+      <li>
+        无序列表项3，嵌套一个无序列表：
+        <ul>
+          <li>嵌套无序列表项1</li>
+          <li>嵌套无序列表项2</li>
+          <li>嵌套无序列表项3</li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      上面两种列表，项都是使用li标签，列表项内部可以
+      使用段落、换行符、图片、链接以及其他列表等等。
+    </p>
+    <p>这个段落来试一试各种内联的css</p>
+    <p
+      style="
+        height: 500px;
+        background-color: blanchedalmond;
+        color: chartreuse;
+        font-size: 30px;
+        margin: 60px;
+        border: 10px;
+        border-color: brown;
+        border-style: solid;
+        padding: 20px;
+      "
+    >
+      静夜思<br />窗前明月光<br />疑是地上霜<br />
+      举头望明月<br />低头思故乡
+    </p>
+    <p>下面创建一个div区块来练习flex弹性盒子</p>
+
+    <div
+      style="display: flex; align-items: center; flex-direction: column-reverse"
+    >
+      <p class="hezi">盒子1</p>
+      <p class="hezi">盒子2</p>
+      <p class="hezi">盒子3</p>
+      <p class="hezi">盒子4</p>
+    </div>
+  </body>
+</html>
