@@ -18,22 +18,41 @@
       li {
         color: chocolate;
       }
-      .hezi {
-        background-color: aquamarine;
-        margin: 10px;
-        width: 100px;
-        height: 80px;
-        padding: 10px;
+
+      .flex {
+        display: flex;
+      }
+      .whitebg {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .yinYing {
+        box-shadow: 1px 1px 1px 1px rgb(141, 130, 151);
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daoHang {
+        padding: 10px 20px;
+        border-bottom: 1px solid #cfcfcf;
+        font-size: 15px;
+        color: aqua;
       }
     </style>
   </head>
   <body>
-    <img
-      src="study里的置顶图.jpg"
-      alt="study里的置顶图.jpg"
-      height="100"
-      width="134.4"
-    />
+    <img src="study里的置顶图.jpg" alt="study里的置顶图.jpg" height="200" />
     <a href="index.html"><p>哪来的回哪去</p></a>
 
     <h1>这是一个h1标题,应用了外部样式表</h1>
@@ -124,15 +143,83 @@
       静夜思<br />窗前明月光<br />疑是地上霜<br />
       举头望明月<br />低头思故乡
     </p>
-    <p>下面创建一个div区块来练习flex弹性盒子</p>
+    <p>下面创建一个div块来练习flex布局</p>
 
     <div
-      style="display: flex; align-items: center; flex-direction: column-reverse"
+      style="
+        background-color: antiquewhite;
+        height: 80vh;
+        margin: 0;
+        border: 1px solid black;
+      "
+      class="flex"
     >
-      <p class="hezi">盒子1</p>
-      <p class="hezi">盒子2</p>
-      <p class="hezi">盒子3</p>
-      <p class="hezi">盒子4</p>
+      <!-- 侧边栏 -->
+      <div style="width: 200px" class="whitebg yinYing">
+        <!-- 头像栏 -->
+        <div
+          style="
+            padding: 10px;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px solid;
+          "
+          class="flex"
+        >
+          <img src="study里的置顶图.jpg" height="100" alt="" />
+          <div style="font-size: 20px">啾咪</div>
+        </div>
+        <!-- 导航栏 -->
+        <div class="flex1">
+          <div class="daoHang">导航</div>
+          <div class="daoHang">导航</div>
+          <div class="daoHang">导航</div>
+          <div class="daoHang">导航</div>
+          <div class="daoHang">导航</div>
+        </div>
+      </div>
+      <!-- 主区域 -->
+      <div class="flex1 flex column">
+        <!-- 头部栏 -->
+        <div style="height: 60px" class="whitebg yinYing"></div>
+        <!-- 内容区 -->
+        <div class="flex1 flex">
+          <!-- 左区 -->
+          <div style="flex: 3" class="flex column mg8">
+            <!-- 数据区 -->
+            <div class="flex">
+              <!-- 数据块 -->
+              <div
+                style="height: 100px"
+                class="flex1 whitebg yinYing mgr8"
+              ></div>
+              <div
+                style="height: 100px"
+                class="flex1 whitebg yinYing mgr8"
+              ></div>
+              <div
+                style="height: 100px"
+                class="flex1 whitebg yinYing mgr8"
+              ></div>
+              <div style="height: 100px" class="flex1 whitebg yinYing"></div>
+            </div>
+            <!-- 列表区 -->
+            <div class="flex column">
+              <!-- 列表项 -->
+              <div class="whitebg yinYing mgt8" style="height: 120px"></div>
+              <div class="whitebg yinYing mgt8" style="height: 120px"></div>
+              <div class="whitebg yinYing mgt8" style="height: 120px"></div>
+            </div>
+          </div>
+          <!-- 右区 -->
+          <div style="flex: 1" class="flex column mgr8 mgt8">
+            <!-- 提示区 -->
+            <div style="height: 150px" class="whitebg yinYing"></div>
+            <!-- 消息区 -->
+            <div style="height: 300px" class="whitebg yinYing mgt8"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
